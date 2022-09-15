@@ -16,7 +16,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=B
+          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=B --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -44,7 +44,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=B
+          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=B --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -68,7 +68,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=B
+          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=B --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -92,7 +92,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=C
+          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=C --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -116,7 +116,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=C
+          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=C --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -140,7 +140,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=D  
+          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=D   --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -164,7 +164,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=D  
+          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=D   --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -188,7 +188,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=E  
+          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=E   --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -212,7 +212,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=E  
+          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=E   --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -236,7 +236,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=F 
+          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=F  --target_url=target_url
 
       - store_artifacts:
           path: ss
@@ -260,7 +260,7 @@ jobs:
 
       - run: 
           name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=F 
+          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=F  --target_url=target_url
 
       - store_artifacts:
           path: ss

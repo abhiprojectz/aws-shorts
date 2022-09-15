@@ -33,26 +33,26 @@ def get_arg_parser() -> argparse.ArgumentParser:
         required=True,
     ) 
     
-    # parser.add_argument(
-    #     "-y",
-    #     "--target_url",
-    #     dest="target_url",
-    #     type=str,
-    #     required=True,
-    # ) 
-
     parser.add_argument(
-        "-a",
-        "--type_content",
-        dest="type_content",
+        "-y",
+        "--target_url",
+        dest="target_url",
         type=str,
         required=True,
     ) 
+
+    # parser.add_argument(
+    #     "-a",
+    #     "--type_content",
+    #     dest="type_content",
+    #     type=str,
+    #     required=True,
+    # ) 
     return parser
 
 
-def setup_chrome_acc(_acc):
-    _lor = os.environ["target_url"]
+def setup_chrome_acc(_acc, target_url):
+    _lor = target_url
     _target = f"{_lor}{_acc}.zip" 
 
     subprocess.run(f"sudo wget --directory-prefix=/home/circleci/project/ {_target}", shell=True)
@@ -79,9 +79,10 @@ def upload():
 
     _acc = args.acc
     _slot = args.slot
+    target_url = args.target_url
 
     # setting up chrome data folder
-    setup_chrome_acc(_acc)
+    setup_chrome_acc(_acc, target_url)
 
     # subprocess.run("sudo rm /root/*.mp4", shell=True)
 
