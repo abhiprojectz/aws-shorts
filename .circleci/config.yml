@@ -6,21 +6,21 @@ jobs:
     resource_class: medium
     steps:
       - checkout
-      - run: 
-          name: Install Libs
-          command: sudo sh libs_installation.sh
+      # - run: 
+      #     name: Install Libs
+      #     command: sudo sh libs_installation.sh
 
-      - run: 
-          name: Install requirements
-          command: sudo pip3 install -r requirements.txt
+      # - run: 
+      #     name: Install requirements
+      #     command: sudo pip3 install -r requirements.txt
 
-      - run: 
-          name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=B --target_url=$target_url
+      # - run: 
+      #     name: Start Script
+      #     command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=B --target_url=$target_url
 
-      - store_artifacts:
-          path: ss
-          destination: artifact-file
+      # - store_artifacts:
+      #     path: ss
+      #     destination: artifact-file
       - run: echo "Build initialized..."
 
 
@@ -123,148 +123,148 @@ jobs:
           destination: artifact-file          
 
 
-  UploadNinePm:
-    machine:
-      image: ubuntu-2204:2022.04.2
-    resource_class: medium
+  # UploadNinePm:
+  #   machine:
+  #     image: ubuntu-2204:2022.04.2
+  #   resource_class: medium
     
-    steps:
-      - checkout
-      - run: 
-          name: Install Libs
-          command: sudo sh libs_installation.sh
+  #   steps:
+  #     - checkout
+  #     - run: 
+  #         name: Install Libs
+  #         command: sudo sh libs_installation.sh
           
-      - run: 
-          name: Install requirements
-          command: sudo pip3 install -r requirements.txt
+  #     - run: 
+  #         name: Install requirements
+  #         command: sudo pip3 install -r requirements.txt
 
-      - run: 
-          name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=D   --target_url=$target_url
+  #     - run: 
+  #         name: Start Script
+  #         command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=D   --target_url=$target_url
 
-      - store_artifacts:
-          path: ss
-          destination: artifact-file
+  #     - store_artifacts:
+  #         path: ss
+  #         destination: artifact-file
 
 
-  UploadTenPm:
-    machine:
-      image: ubuntu-2204:2022.04.2
-    resource_class: medium
+  # UploadTenPm:
+  #   machine:
+  #     image: ubuntu-2204:2022.04.2
+  #   resource_class: medium
     
-    steps:
-      - checkout
-      - run: 
-          name: Install Libs
-          command: sudo sh libs_installation.sh
+  #   steps:
+  #     - checkout
+  #     - run: 
+  #         name: Install Libs
+  #         command: sudo sh libs_installation.sh
           
-      - run: 
-          name: Install requirements
-          command: sudo pip3 install -r requirements.txt
+  #     - run: 
+  #         name: Install requirements
+  #         command: sudo pip3 install -r requirements.txt
 
-      - run: 
-          name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=D   --target_url=$target_url
+  #     - run: 
+  #         name: Start Script
+  #         command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=D   --target_url=$target_url
 
-      - store_artifacts:
-          path: ss
-          destination: artifact-file          
+  #     - store_artifacts:
+  #         path: ss
+  #         destination: artifact-file          
 
 
-  UploadOnePm:
-    machine:
-      image: ubuntu-2204:2022.04.2
-    resource_class: medium
+  # UploadOnePm:
+  #   machine:
+  #     image: ubuntu-2204:2022.04.2
+  #   resource_class: medium
     
-    steps:
-      - checkout
-      - run: 
-          name: Install Libs
-          command: sudo sh libs_installation.sh
+  #   steps:
+  #     - checkout
+  #     - run: 
+  #         name: Install Libs
+  #         command: sudo sh libs_installation.sh
 
-      - run: 
-          name: Install requirements
-          command: sudo pip3 install -r requirements.txt
+  #     - run: 
+  #         name: Install requirements
+  #         command: sudo pip3 install -r requirements.txt
 
-      - run: 
-          name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=E   --target_url=$target_url
+  #     - run: 
+  #         name: Start Script
+  #         command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=E   --target_url=$target_url
 
-      - store_artifacts:
-          path: ss
-          destination: artifact-file
+  #     - store_artifacts:
+  #         path: ss
+  #         destination: artifact-file
 
 
-  UploadTwoPm:
-    machine:
-      image: ubuntu-2204:2022.04.2
-    resource_class: medium
+  # UploadTwoPm:
+  #   machine:
+  #     image: ubuntu-2204:2022.04.2
+  #   resource_class: medium
     
-    steps:
-      - checkout
-      - run: 
-          name: Install Libs
-          command: sudo sh libs_installation.sh
+  #   steps:
+  #     - checkout
+  #     - run: 
+  #         name: Install Libs
+  #         command: sudo sh libs_installation.sh
 
-      - run: 
-          name: Install requirements
-          command: sudo pip3 install -r requirements.txt
+  #     - run: 
+  #         name: Install requirements
+  #         command: sudo pip3 install -r requirements.txt
 
-      - run: 
-          name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=E   --target_url=$target_url
+  #     - run: 
+  #         name: Start Script
+  #         command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=E   --target_url=$target_url
 
-      - store_artifacts:
-          path: ss
-          destination: artifact-file
+  #     - store_artifacts:
+  #         path: ss
+  #         destination: artifact-file
 
 
-  UploadThreeAm:
-    machine:
-      image: ubuntu-2204:2022.04.2
-    resource_class: medium
+  # UploadThreeAm:
+  #   machine:
+  #     image: ubuntu-2204:2022.04.2
+  #   resource_class: medium
     
-    steps:
-      - checkout
-      - run: 
-          name: Install Libs
-          command: sudo sh libs_installation.sh
+  #   steps:
+  #     - checkout
+  #     - run: 
+  #         name: Install Libs
+  #         command: sudo sh libs_installation.sh
 
-      - run: 
-          name: Install requirements
-          command: sudo pip3 install -r requirements.txt
+  #     - run: 
+  #         name: Install requirements
+  #         command: sudo pip3 install -r requirements.txt
 
-      - run: 
-          name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=F  --target_url=$target_url
+  #     - run: 
+  #         name: Start Script
+  #         command: sudo python3 /home/circleci/project/start_script.py --slot=day --acc=F  --target_url=$target_url
 
-      - store_artifacts:
-          path: ss
-          destination: artifact-file
+  #     - store_artifacts:
+  #         path: ss
+  #         destination: artifact-file
 
 
-  UploadFourAm:
-    machine:
-      image: ubuntu-2204:2022.04.2
-    resource_class: medium
+  # UploadFourAm:
+  #   machine:
+  #     image: ubuntu-2204:2022.04.2
+  #   resource_class: medium
     
-    steps:
-      - checkout
-      - run: 
-          name: Install Libs
-          command: sudo sh libs_installation.sh
+  #   steps:
+  #     - checkout
+  #     - run: 
+  #         name: Install Libs
+  #         command: sudo sh libs_installation.sh
 
-      - run: 
-          name: Install requirements
-          command: sudo pip3 install -r requirements.txt
+  #     - run: 
+  #         name: Install requirements
+  #         command: sudo pip3 install -r requirements.txt
 
-      - run: 
-          name: Start Script
-          command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=F  --target_url=$target_url
+  #     - run: 
+  #         name: Start Script
+  #         command: sudo python3 /home/circleci/project/start_script.py --slot=night --acc=F  --target_url=$target_url
 
-      - store_artifacts:
-          path: ss
-          destination: artifact-file
+  #     - store_artifacts:
+  #         path: ss
+  #         destination: artifact-file
 
 
 
@@ -319,68 +319,68 @@ workflows:
     jobs:
       - UploadSevenPm
 
-  UploadNinePm-workflow:
-    triggers:
-      - schedule:
-          cron: "0 21 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - UploadNinePm
+  # UploadNinePm-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 21 * * *"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
+  #   jobs:
+  #     - UploadNinePm
 
-  UploadTenPm-workflow:
-    triggers:
-      - schedule:
-          cron: "0 22 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - UploadTenPm
+  # UploadTenPm-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 22 * * *"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
+  #   jobs:
+  #     - UploadTenPm
 
-  UploadOnePm-workflow:
-    triggers:
-      - schedule:
-          cron: "0 13 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - UploadOnePm
+  # UploadOnePm-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 13 * * *"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
+  #   jobs:
+  #     - UploadOnePm
 
-  UploadTwoPm-workflow:
-    triggers:
-      - schedule:
-          cron: "0 14 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - UploadTwoPm
+  # UploadTwoPm-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 14 * * *"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
+  #   jobs:
+  #     - UploadTwoPm
 
-  UploadThreeAm-workflow:
-    triggers:
-      - schedule:
-          cron: "0 3 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - UploadThreeAm
+  # UploadThreeAm-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 3 * * *"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
+  #   jobs:
+  #     - UploadThreeAm
 
-  UploadFourAm-workflow:
-    triggers:
-      - schedule:
-          cron: "0 4 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - UploadFourAm
+  # UploadFourAm-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 4 * * *"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
+  #   jobs:
+  #     - UploadFourAm
